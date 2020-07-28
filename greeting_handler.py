@@ -17,7 +17,7 @@ def welcome(request, responder):
 @app.handle(targeted_only=True)
 def get_user_name(request, responder):
     try:
-        responder.slots['name'] = response.context['name']
+        responder.slots['name'] = responder.context['name']
     except KeyError:
         responder.slots['name'] = request.text
     responder.reply('Nice to meet you,  {name}. How can I help you?')
