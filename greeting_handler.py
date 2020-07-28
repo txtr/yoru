@@ -18,7 +18,7 @@ def welcome(request, responder):
 def get_user_name(request, responder):
     try:
         responder.slots['name'] = responder.context['name']
-    except KeyError:
+    except:
         responder.slots['name'] = request.text
     responder.reply('Nice to meet you,  {name}. How can I help you?')
 
@@ -26,8 +26,9 @@ def get_user_name(request, responder):
 @app.handle(intent='exit')
 def say_bye(request, responder):
     try:
-        name = responder.slots['name']
-    except:
+        name = request.context['name']
+    except Exception as e:
+        print(e)
         name = ''
     responder.reply('Bye '+ name +', have a good day.')
     # responder.reply('Good Bye.', 'See ya.', 'Bye '+ name +', have a good day.', 'Bye bye!', 'See you soon.', 'Untill next time!', 'It was nice seeing you')

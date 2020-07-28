@@ -2,7 +2,6 @@
 """This module contains a template MindMeld application"""
 from yoru.root import app
 import yoru.greeting_handler
-import yoru.theatre_handler
 __all__ = ['app']
 
 
