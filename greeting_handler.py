@@ -8,7 +8,7 @@ from .root import app
 def welcome(request, responder):
     try:
         name = responder.slots['name']
-        response = 'Hello, { name }. Its me Yoru. How can I help you?'
+        responder.reply('Hello, { name }. Its me Yoru. How can I help you?')
     except KeyError:
         responder.reply('Hello. Welcome aboard Oceanic Symphony, I am your assistant YORU. What can i call you?')
         responder.params.target_dialogue_state = 'get_user_name'
