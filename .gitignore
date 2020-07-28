@@ -6,3 +6,4 @@ share/
 __pycache__/
 .vscode/
 .generated/
+*.pyc
