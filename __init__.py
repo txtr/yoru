@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 """This module contains a template MindMeld application"""
-from mindmeld import Application
-
-app = Application(__name__)
-
+from yoru.root import app
+import yoru.greeting
 __all__ = ['app']
 
 
