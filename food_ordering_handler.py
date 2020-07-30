@@ -179,7 +179,7 @@ def fo_build_order(request, responder):
                     responder.reply("Sorry, I couldn't find anything called {dish_name} at "
                                     "{restaurant_name}. Would you like to order something "
                                     "else?")
-                    responder.params.allowed_intents = ['food_ordering']
+                    responder.params.allowed_intents = ['food_ordering.*']
                     responder.listen()
                     return
 
