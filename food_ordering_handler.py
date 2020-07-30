@@ -384,3 +384,16 @@ def _price_dish(dish):
     if 'options' in dish:
         total_price += sum([option.get('price', 0) for option in dish['options']])
     return total_price * dish['quantity']
+
+
+
+####################################################################################################################
+
+@app.handle(domain='food_ordering', intent='list_restaurants')
+def list_restaurants(request, responder):
+    reply = 'Heres the list of restaurants:'
+    restaurant_names = [_kb_fetch('restaurants', rid)['name'] for rid in restaurant_ids]
+    index=1
+    for restaurant_name in restaurant_names:
+        reply += '\n' + index + '. ' + restaurant_name 
+    responder.reply(reply)
