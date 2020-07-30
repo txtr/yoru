@@ -389,7 +389,7 @@ def _price_dish(dish):
 
 ####################################################################################################################
 
-def clean _fo_frame(responder):
+def clean_fo_frame(responder):
     frame_names = ['restaurant', 'dishes', 'dish_entities']
     for frame_name in frame_names:
         responder.frame[frame_name] = None
