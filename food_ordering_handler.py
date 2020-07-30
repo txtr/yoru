@@ -1,11 +1,10 @@
-"""This module contains the MindMeld food ordering blueprint application"""
-from mindmeld import Application
+# -*- coding: utf-8 -*-
+"""This module contains the dialogue states for the 'greeting' domain
+in the MindMeld home assistant blueprint application
+"""
+from .root import app
 
-app = Application(__name__)
-
-__all__ = ['app']
-
-@app.handle(domain="food_ordering", intent="exit_domain")
+@app.handle(intent="exit_food_ordering")
 def fo_exit(response, responder):
     """
     When the user wants to exit food ordering domain.
@@ -21,7 +20,7 @@ def fo_exit(response, responder):
 
 
 
-@app.handle(domain='food_ordering', intent='start_over')
+@app.handle(intent='start_over')
 def fo_start_over(request, responder):
     """
     When the user wants to start over, clear the dialogue frame and reply for the next request.
@@ -33,7 +32,7 @@ def fo_start_over(request, responder):
     responder.params.allowed_intents = ['food_ordering.*']
     responder.listen()
 
-@app.handle(domain='food_ordering', intent='help')
+@app.handle(intent='help')
 def fo_help(request, responder):
     """
     When the user asks for help, provide some sample queries they can try.
@@ -47,7 +46,7 @@ def fo_help(request, responder):
     responder.params.allowed_intents = ['food_ordering.*']
     responder.reply(replies)
 
-@app.handle(domain='food_ordering', intent='place_order')
+@app.handle(intent='place_order')
 def fo_place_order(request, responder):
     """
     When the user wants to place the order, call an external API to process the transaction and
@@ -131,7 +130,7 @@ def fo_build_order(request, responder):
             responder.slots['restaurant_name'] = restaurant_entity['text']
             responder.reply("Sorry, I could not find a restaurant called {restaurant_name}. Is "
                             "there another restaurant you would like to order from?")
-            responder.params.allowed_intents = ['food_ordering.*']
+            ############################################################################################responder.params.allowed_intents = ['food_ordering.*']
             responder.listen()
             return
 
@@ -180,7 +179,7 @@ def fo_build_order(request, responder):
                     responder.reply("Sorry, I couldn't find anything called {dish_name} at "
                                     "{restaurant_name}. Would you like to order something "
                                     "else?")
-                    responder.params.allowed_intents = ['food_ordering']
+                    #########################################################################################responder.params.allowed_intents = ['food_ordering']
                     responder.listen()
                     return
 
@@ -212,14 +211,14 @@ def fo_build_order(request, responder):
                 responder.slots['dish_name'] = dish_entity['text']
                 responder.reply('I found {dish_name} at {suggestions}. Where would you like '
                                 'to order from?')
-                responder.params.allowed_intents = ['food_ordering.*']
+                #################################################################################################responder.params.allowed_intents = ['food_ordering.*']
                 responder.listen()
             else:
                 # If none of the user-requested dishes could be resolved to entries in the
                 # knowledge base, notify the user and prompt to choose a restaurant by name.
                 responder.reply("Sorry, I didn't find what you were looking for at any "
                                 "restaurant on this cruise. If you can specify the restaurant I could help you better.")
-                responder.params.allowed_intents = ['food_ordering.*']
+                ###################################################################################################responder.params.allowed_intents = ['food_ordering.*']
                 responder.listen()
 
             return
