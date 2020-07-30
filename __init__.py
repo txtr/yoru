@@ -3,7 +3,6 @@
 from yoru.root import app
 import yoru.greeting_handler
 import yoru.food_ordering_handler
-import yoru.day_planner_handler
 __all__ = ['app']
 
 
