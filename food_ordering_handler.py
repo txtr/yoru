@@ -397,7 +397,8 @@ def clean_fo_frame(responder):
 @app.handle(domain='food_ordering', intent='list_restaurants')
 def list_restaurants(request, responder):
     reply = 'Heres the list of restaurants:'
-    restaurant_names = [_kb_fetch('restaurants', rid)['name'] for rid in restaurant_ids]
+    restaurants = app.question_answerer.get(index='restaurants')
+    restaurant_names = set([restaurant['name'] for restaurant in restaurants])
     index=1
     for restaurant_name in restaurant_names:
         reply += '\n' + index + '. ' + restaurant_name 
