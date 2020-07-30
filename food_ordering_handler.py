@@ -4,12 +4,13 @@ in the MindMeld home assistant blueprint application
 """
 from .root import app
 
+
 @app.handle(domain='food_ordering', intent="exit_food_ordering")
 def fo_exit(response, responder):
     """
     When the user wants to exit food ordering domain.
     """
-    responder.frame['food_ordering'] = {}
+    responder.frame = {}
     replies = ['I hope you will try ordering food again.']
     responder.reply(replies)
     # send change domain flag to frontend
@@ -26,7 +27,7 @@ def fo_start_over(request, responder):
     When the user wants to start over, clear the dialogue frame and reply for the next request.
     """
     # Clear the dialogue frame and respond with a variation of the welcome message.
-    responder.frame['food_ordering'] = {}
+    responder.frame = {}
     replies = ["Ok, let's start over! What restaurant would you like to order from?"]
     responder.reply(replies)
     responder.params.allowed_intents = ['food_ordering.*']
@@ -55,13 +56,13 @@ def fo_place_order(request, responder):
     For this demo app, we just display a fixed response to indicate that an order has been placed.
     """
     # Get the user's restaurant selection from the dialogue frame.
-    selected_restaurant = request.frame.get('food_ordering')['restaurant']
+    selected_restaurant = request.frame.get('restaurant')
 
     if selected_restaurant:
         # If a restaurant has been selected, set its name in the natural language response.
         responder.slots['restaurant_name'] = selected_restaurant['name']
 
-        if len(request.frame.get('food_ordering')['dishes']) > 0:
+        if len(request.frame.get('dishes', [])) > 0:
             # If the user has already made his dish selections from the menu, proceed to place the
             # order. In a real application, this would be done by calling an external API to
             # process the transaction. Here, we just reply with a canned response confirming that
@@ -71,7 +72,7 @@ def fo_place_order(request, responder):
             # TODO forward to general domain to classify
 
             # Clear the dialogue frame to start afresh for the next user request.
-            responder.frame['food_ordering'] = {}
+            responder.frame = {}
         else:
             # If no dishes have been requested, prompt the user to order something from the menu.
             replies = ["I don't have any dishes in the basket yet. What would you like to order "
@@ -98,7 +99,7 @@ def fo_build_order(request, responder):
     """
     # Get information about the user's requested restaurant from the dialogue frame, in case a
     # selection has been already made in a previous turn.
-    selected_restaurant = request.frame.get('food_ordering')['restaurant']
+    selected_restaurant = request.frame.get('restaurant')
 
     # Next, check for any new restaurant requests the user has made in this turn. If the user
     # mentions more than one restaurant (i.e. more than one restaurant entity is recognized in
@@ -121,8 +122,8 @@ def fo_build_order(request, responder):
             # restaurant entity detected in this turn is different from the existing user
             # selection in the dialogue frame (to ensure that this is not a continuation of the
             # order at the same location).
-            responder.frame['food_ordering']['restaurant'] = selected_restaurant
-            responder.frame['food_ordering']['dishes'] = []
+            responder.frame['restaurant'] = selected_restaurant
+            responder.frame['dishes'] = []
         else:
             # If the restaurant entity couldn't be successfully linked to any entry in the
             # knowledge base (i.e. there are no candidate resolved values to choose from),
@@ -142,20 +143,17 @@ def fo_build_order(request, responder):
     # dishes ordered by the user.
 
     # First, get details on dish selections already made in previous turns from the dialogue frame.
-    try:
-        selected_dishes = responder.frame.get('food_ordering')['dishes']
-    except:
-        responder.frame.get('food_ordering')['dishes'] = []
+    selected_dishes = responder.frame.get('dishes', [])
 
     # Next, get all the recognized dish entities in the current user query.
     dish_entities = [e for e in request.entities if e['type'] == 'dish']
 
     # If we cannot find any dish entities in the current query, check the frame to see
     # if the there were any dish entities stored previously
-    dish_entities = dish_entities if dish_entities else responder.frame['food_ordering'].pop('dish_entities', [])
+    dish_entities = dish_entities if dish_entities else responder.frame.pop('dish_entities', [])
 
     if len(dish_entities) > 0:
-        responder.frame['food_ordering']['dish_entities'] = dish_entities
+        responder.frame['dish_entities'] = dish_entities
 
         if selected_restaurant:
             # If the user has requested one or more dishes and also selected a specific
@@ -188,7 +186,7 @@ def fo_build_order(request, responder):
 
             # Update the basket information in the dialogue frame after all the dish entities
             # have been processed and mapped to their respective KB entries.
-            responder.frame['food_ordering']['dishes'] = selected_dishes
+            responder.frame['dishes'] = selected_dishes
         else:
             # If the user has requested one or more dishes, but not selected a restaurant yet,
             # prompt him to pick a restaurant from a list of suggestions. This suggestion list can
@@ -389,8 +387,12 @@ def _price_dish(dish):
     return total_price * dish['quantity']
 
 
-
 ####################################################################################################################
+
+def clean _fo_frame(responder):
+    frame_names = ['restaurant', 'dishes', 'dish_entities']
+    for frame_name in frame_names:
+        responder.frame[frame_name] = None
 
 @app.handle(domain='food_ordering', intent='list_restaurants')
 def list_restaurants(request, responder):
