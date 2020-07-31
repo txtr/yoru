@@ -392,7 +392,7 @@ def _price_dish(dish):
 def clean_fo_frame(responder):
     frame_names = ['restaurant', 'dishes', 'dish_entities']
     for frame_name in frame_names:
-        responder.frame[frame_name] = None
+        del responder.frame[frame_name]
     return responder
 
 @app.handle(domain='food_ordering', intent='list_restaurants')
