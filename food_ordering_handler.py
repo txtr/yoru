@@ -403,5 +403,6 @@ def list_restaurants(request, responder):
     restaurant_names = set([restaurant['name'] for restaurant in restaurants])
     index=1
     for restaurant_name in restaurant_names:
-        reply += '\n' + str(index) + '. ' + restaurant_name 
+        reply += '\n' + str(index) + '. ' + restaurant_name
+        index = index + 1 
     responder.reply(reply)
