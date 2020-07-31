@@ -5,3 +5,4 @@ details of {Carnival|event}
 details of {stand up|event}
 hat time does the {party|event} starts
 what time does the {meeting|event} starts
+tell me more

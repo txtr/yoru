@@ -1,0 +1,110 @@
+where is {IMAX Theatre|location|destination}
+where is {Deck Lounge|location|destination}
+how do I reach the {washroom|location|destination}
+how do I reach the {gym|location|destination}
+how do I reach the {restuarant|location|destination}
+how do I reach the {spa|location|destination}
+how do I reach the {laundry|location|destination}
+how do I reach the {doctor|location|destination}
+how do I reach the {pool|location|destination}
+how do I reach the {games|location|destination}
+way to {washroom|location|destination}
+way to {gym|location|destination}
+way to {restuarant|location|destination}
+way to {IMAX Theatre|location|destination}
+way to {laundry|location|destination}
+way to {doctor|location|destination}
+way to {pool|location|destination}
+way to {games|location|destination}
+is there a {washroom|location|destination} nearby
+is there a {gym|location|destination} nearby
+is there a {restuarant|location|destination} nearby
+is there a {IMAX Theatre|location|destination} nearby
+is there a {laundry|location|destination} nearby
+is there a {doctor|location|destination} nearby
+is there a {pool|location|destination} nearby
+is there a {Deck Lounge|location|destination} nearby
+{washroom|location|destination} please
+{gym|location|destination} please
+{restuarant|location|destination} please
+{IMAX Theatre|location|destination} please
+{laundry|location|destination} please
+{doctor|location|destination} please
+{pool|location|destination} please
+{games|location|destination} please
+show me the closest {washroom|location|destination}
+show me the closest {gym|location|destination}
+show me the closest {restuarant|location|destination}
+show me the closest {spa|location|destination}
+show me the closest {laundry|location|destination}
+show me the closest {doctor|location|destination}
+show me the closest {pool|location|destination}
+show me the closest {games|location|destination}
+take me to the {washroom|location|destination}
+take me to the {gym|location|destination}
+take me to the {restuarant|location|destination}
+take me to the {IMAX Theatre|location|destination}
+take me to the {laundry|location|destination}
+take me to the {doctor|location|destination}
+take me to the {pool|location|destination}
+take me to the {games|location|destination}
+is there a {washroom|location|destination} around
+is there a {gym|location|destination} around
+is there a {restuarant|location|destination} around
+is there a {Deck Lounge|location|destination} around
+is there a {laundry|location|destination} around
+is there a {doctor|location|destination} around
+is there a {pool|location|destination} around
+is there a {games|location|destination} around
+i want to pee
+i need to pee
+bladder emergency
+natures call
+toilet
+i am hungry
+something to eat
+feed me please
+where can we dine
+where can we eat
+where do you workout
+i need to exercise
+i am looking for a threadmill
+i am looking to benchpress
+i want to get my nails done
+where can  get my nails done
+i want a massage
+where can i get a massage
+i want to get a facial
+where can i get a facial
+clothes are dirty
+clothes are crumpled
+where can i get my clothes ironed
+where can i get my clothes washed
+i am sick
+down with the flu
+i think im getting a fever
+do you have a doctor on board
+call me a doctor
+health emergency
+someone just fainted
+i want to swim
+wanna catch some sun
+i want to take a dip
+i want to play games
+i want to play snooker
+i want to play tt
+i want to play chess
+where do you play games
+give me shortest path to {salon|location|destination}
+where is {swimmingpool|location|destination}
+give me shortest path to {restuarant|location|destination}
+give me shortest path to  my {room|location|destination}
+way to my {room|location|destination}
+i am at {shop|location|source}
+i am at {restuarant|location|source}
+i am at {salon|location|source}
+i am at {IMAX Theatre|location|source}
+my location is at {Deck Lounge|location|source}
+I am standing at {gym|location|source}
+i am near {gym|location|source}
+i am close to {IMAX Theatre|location|source}

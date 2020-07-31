@@ -1,0 +1,95 @@
+attic
+back
+backroom
+backyard
+basement
+bathroom
+bedroom
+boardroom
+boiler room
+breakfast room
+cellar
+clean room
+cloakroom
+closet
+common room
+conference room
+corridor
+dining room
+downstairs
+dressing room
+entryway
+exterior
+family room
+front
+foyer
+guest bathroom
+guest bedroom
+guest room
+guestroom
+green room
+hall
+hallway
+home
+homeroom
+kids room
+kitchen
+kitchenette
+ladies room
+laundry room
+library
+lobby
+lounge
+lunchroom
+master bathroom
+master bath
+master bedroom
+mens room
+mudroom
+nursery
+office
+outside
+playroom
+porch
+studio
+study
+upstairs
+visitors room
+waiting room
+washroom
+gym
+clinic
+doctor
+water
+womens room
+restuarant
+roomservice
+security
+spa
+bar
+casino
+elevator
+IMAX Theatre
+theatre
+Deck Lounge
+deck lounge
+first floor
+second floor
+third floor
+Tear Pool
+Khalid's BBQ Shack
+Relaxo Sauna
+Shop
+Bulky's Gym
+Casino Royale
+JiJi's Asian Cousine
+Indian Food Fiesta
+imax theatre
+tear pool
+khalid's bbq shack
+bulky's gym
+casino royale
+jiji's asian cousine
+indian food fiesta
+Indian food
+Food Fiesta

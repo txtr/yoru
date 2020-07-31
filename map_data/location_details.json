@@ -1,0 +1,48 @@
+{   
+    "gym":{
+        "open":"7am",
+        "close":"10pm",
+        "phone":"8344574275334"
+    },
+    "JiJi's Asian Cousine":{
+        "open":"7am",
+        "close":"12pm",
+        "phone":"544574275"
+    },
+    "Khalid's BBQ Shack":{
+        "open":"24/7",
+        "close":"never",
+        "phone":"544574275"
+    },
+    "Indian Food Fiesta":{
+        "open":"10am",
+        "close":"2am",
+        "phone":"544574275"
+    },
+    "theatre":{
+        "open":"11am",
+        "close":"2am",
+        "phone":"544574275"
+    },
+    "bar":{
+        "open":"10am",
+        "close":"12pm",
+        "phone":"544574275"
+    },
+    "casino":{
+        "open":"always",
+        "close":"never",
+        "phone":"544574275"
+    },
+    "shop":{
+        "open":"11am",
+        "close":"10pm",
+        "phone":"544574275"
+    },
+    "Deck Lounge":{
+        "open":"24/7",
+        "close":"never",
+        "phone":"544574275"
+    }
+}
+

@@ -23,11 +23,4 @@ list {todays|sys_time} events
 show events
 list events for me
 show events for me
-list events
-list events
-list events
-list events
-show events 
-show events 
-show events 
-show events 
+
