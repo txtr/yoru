@@ -8,4 +8,4 @@ from datetime
 @app.handle(domain='day_planning', intent='start_planning')
 def start_planning(request, responder):
     pass
-            
+

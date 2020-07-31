@@ -388,7 +388,7 @@ def _price_dish(dish):
     return total_price * dish['quantity']
 
 
-####################################################################################################################
+################################################################
 
 def clean_fo_frame(responder):
     frame_names = ['restaurant', 'dishes', 'dish_entities']

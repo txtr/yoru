@@ -1,0 +1,44 @@
+list cabins
+list room
+list rooms
+list cabin
+what are all the cabin tiers
+what tiers of cabin are there
+what tier of cabin are there
+what tiers of cabins are there
+what tier of cabins are there
+what cabin tiers are there
+list cabin tiers
+show all cabin tiers
+show cabin tiers
+list cabin tiers
+what tiers of rooms are there
+what tier of rooms are there
+what tiers of room are there
+what tier of room are there
+what are all the room  tiers
+what room tiers are there
+list room tiers
+show all room tiers
+show room tiers
+list room tiers
+what types of cabins are there
+what type of cabins are there
+what types of cabin are there
+what type of cabin are there
+what are all the cabin types
+what cabin types are there
+list cabin types
+show all cabin types
+show cabin types
+list cabin types
+what types of rooms are there
+what type of rooms are there
+what types of room are there
+what type of room are there
+what are all the room  types
+what room types are there
+list room types
+show all room types
+show room types
+list room types

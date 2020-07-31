@@ -1,0 +1,69 @@
+{Presedential|cabin_tier} {starboard|deck}
+{starboard|deck}
+{Presedential|cabin_tier}
+book a cabin
+book cabin
+cabins booking
+book me a cabin
+i need cabin
+i need a cabin
+i need some cabin
+i need any cabin
+i need a cabin
+cabins needed
+book a {Presedential|cabin_tier} cabin
+book a {Presedential|cabin_tier} room
+book a {port|deck} room
+book a {port|deck} cabin
+book a room
+room booking
+book room
+book a {standard|cabin_tier} cabins on {port|deck}
+book a {standard|cabin_tier} cabins on {port|deck}
+book me a {standard|cabin_tier} cabins on {port|deck}
+book me a {standard|cabin_tier} cabins on {port|deck}
+book {standard|cabin_tier} cabins on {port|deck}
+book {standard|cabin_tier} cabins on {port|deck}
+book cabins on {port|deck}
+book cabins on {port|deck}
+book a {standard|cabin_tier} room on {port|deck}
+book a {standard|cabin_tier} room on {port|deck}
+book me a {standard|cabin_tier} room on {port|deck}
+book me a {standard|cabin_tier} room on {port|deck}
+book {standard|cabin_tier} room on {port|deck}
+book {standard|cabin_tier} room on {port|deck}
+book room on {port|deck}
+book room on {port|deck}
+book cabins
+cabins booking
+book me a cabins
+i need cabins
+i need a {Presedential|cabin_tier} cabins
+i need a cabin
+i need some cabins
+i need any cabin
+i need a cabin
+cabins needed
+book a {Presedential|cabin_tier} cabin
+book a {Presedential|cabin_tier} rooms 
+book a {port|deck} rooms 
+book a {port|deck} cabin
+book a rooms 
+rooms  booking
+book rooms 
+book a {standard|cabin_tier} cabins on {port|deck}
+book a {standard|cabin_tier} cabins on {port|deck}
+book me a {standard|cabin_tier} cabins on {port|deck}
+book me a {standard|cabin_tier} cabins on {port|deck}
+book {standard|cabin_tier} cabins on {port|deck}
+book {standard|cabin_tier} cabins on {port|deck}
+book cabins on {port|deck}
+book cabins on {port|deck}
+book a {standard|cabin_tier} rooms  on {port|deck}
+book a {standard|cabin_tier} rooms  on {port|deck}
+book me a {standard|cabin_tier} rooms  on {port|deck}
+book me a {standard|cabin_tier} rooms  on {port|deck}
+book {standard|cabin_tier} rooms  on {port|deck}
+book {standard|cabin_tier} rooms  on {port|deck}
+book rooms  on {port|deck}
+book rooms  on {port|deck}
