@@ -1,0 +1,136 @@
+show me details of {coldplay|event}
+tell me more about {new year|event}
+details of {Coldplay|event}
+details of {Carnival|event}
+details of {stand up|event}
+details of {standup|event}
+details of {standup comedy|event}
+details of {new year party|event}
+details of {new year|event}
+show me {Meeting|event}
+what is {Coldplay|event}
+when is {Halloween|event}
+tell me about {New Year|event}
+tell me more about {new year|event}
+what about {New Year|event}
+tell me about {New Year|event}
+tell me more about {Live Concert|event}
+what about {Halloween|event}
+what about {Stand Up Comedy|event}
+what about {stand up comedy|event}
+details of {coldplay|event}
+how about {concert|event}
+how about {Concert|event}
+how about {new year|event}
+how about {New Year|event}
+how about {stand up comedy|event}
+how about {stand up|event}
+how about {stand up comedy|event}
+how about {comedy|event}
+details of {concert|event}
+details of {standup comedy|event}
+details of {new year party|event}
+tell me more about {concert|event}
+tell me more about {stand up|event}
+show me details of {coldplay|event}
+tell me more about {new year|event}
+details of {Coldplay|event}
+details of {Carnival|event}
+details of {stand up|event}
+details of {standup|event}
+details of {standup comedy|event}
+details of {new year party|event}
+details of {new year|event}
+show me {Meeting|event}
+what is {Coldplay|event}
+when is {Halloween|event}
+tell me about {New Year|event}
+tell me more about {new year|event}
+what about {New Year|event}
+tell me about {New Year|event}
+tell me more about {Live Concert|event}
+what about {Halloween|event}
+what about {Stand Up Comedy|event}
+what about {stand up comedy|event}
+details of {coldplay|event}
+how about {concert|event}
+how about {Concert|event}
+how about {new year|event}
+how about {New Year|event}
+how about {stand up comedy|event}
+how about {stand up|event}
+how about {stand up comedy|event}
+how about {comedy|event}
+details of {concert|event}
+details of {standup comedy|event}
+details of {new year party|event}
+tell me more about {concert|event}
+tell me more about {stand up|event}
+show me details of {coldplay|event}
+tell me more about {new year|event}
+details of {Coldplay|event}
+details of {Carnival|event}
+details of {stand up|event}
+details of {standup|event}
+details of {standup comedy|event}
+details of {new year party|event}
+details of {new year|event}
+show me {Meeting|event}
+what is {Coldplay|event}
+when is {Halloween|event}
+tell me about {New Year|event}
+tell me more about {new year|event}
+what about {New Year|event}
+tell me about {New Year|event}
+tell me more about {Live Concert|event}
+what about {Halloween|event}
+what about {Stand Up Comedy|event}
+what about {stand up comedy|event}
+details of {coldplay|event}
+how about {concerts|event}
+how about {Concert|event}
+how about {new year|event}
+how about {New Year|event}
+how about {stand up comedy|event}
+how about {standup|event}
+how about {stand up comedy|event}
+how about {comedy|event}
+details of {concerts|event}
+details of {standup comedy|event}
+details of {new year party|event}
+tell me more about {concerts|event}
+tell me more about {stand up|event}
+show me details of {coldplay|event}
+tell me more about {new year|event}
+details of {Coldplay|event}
+details of {Carnival|event}
+details of {stand up|event}
+details of {standup|event}
+details of {standup comedy|event}
+details of {new year party|event}
+details of {new year|event}
+show me {Meeting|event}
+what is {Coldplay|event}
+when is {Halloween|event}
+tell me about {New Year|event}
+tell me more about {new year|event}
+what about {New Year|event}
+tell me about {New Year|event}
+tell me more about {Live Concert|event}
+what about {Halloween|event}
+what about {Stand Up Comedy|event}
+what about {stand up comedy|event}
+details of {coldplay|event}
+how about {concerts|event}
+how about {Concert|event}
+how about {new year|event}
+how about {New Year|event}
+how about {stand up comedy|event}
+how about {stand up|event}
+how about {stand up comedy|event}
+how about {comedy|event}
+details of {concert|event}
+details of {standup comedy|event}
+details of {new year party|event}
+tell me more about {concert|event}
+tell me more about {stand up|event}

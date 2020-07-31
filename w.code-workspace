@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../blueprints"
+		}
+	],
+	"remoteAuthority": "wsl+Ubuntu-18.04",
+	"settings": {}
+}

@@ -1,0 +1,26 @@
+[
+    {
+        "id":"1",
+        "name":"New Year Party",
+        "date":"31/12/2020",
+        "time":"12:00 AM IST",
+        "venue":"2nd Floor Hall Way",
+        "details":"2020 new year celebration "
+    },
+    {
+        "id":"2",
+        "name":"Live Concert",
+        "date":"01/01/2021",
+        "time":"12:00 AM IST",
+        "venue":"2nd Floor Hall Way",
+        "details":"Live performance by AR. Rahman"
+    },
+    {
+        "id":"3",
+        "name":"Stand Up Comedy",
+        "date":"11/01/2020",
+        "time":"09:00 PM IST",
+        "venue":"15th Floor Concert Hall",
+        "details":"Stand Up special by Jing Yang"
+    }
+]

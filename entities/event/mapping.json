@@ -1,0 +1,34 @@
+{
+  "kb_index_name": "events",
+  "kb_field_name": "name",
+  "entities": [
+      {
+          "whitelist": [
+              "new year",
+              "new year party",
+              "New year",
+              "New Year"
+          ],
+          "cname": "New Year Party",
+          "id": "1"
+      },
+      {
+          "whitelist": [
+              "live concert",
+              "concert",
+              "Live concert",
+              "Concert"
+          ],
+          "cname": "Live Concert",
+          "id": "2" 
+      },
+      {
+        "whitelist": [
+            "stand up",
+            "stand up comedy",
+            "comedy"
+        ],
+        "cname": "Stand Up Comedy",
+        "id": "3"
+      }
+  ]}

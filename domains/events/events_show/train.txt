@@ -1,0 +1,33 @@
+show me {todays|sys_time} events 
+is {new year party|event} on {friday|sys_time}
+{todays|sys_time} events
+events today
+any events {todays|sys_time}
+any thing exciting {todays|sys_time}
+someting exciting 
+any exciting events
+any thing good coming up
+show me {upcoming|sys_time} events
+upcoming events
+any exciting events coming up 
+some exciting stuff
+list events
+list eventz
+list eventzz
+list event
+list some events
+show me some events
+events
+some event
+list {todays|sys_time} events
+show events
+list events for me
+show events for me
+list events
+list events
+list events
+list events
+show events 
+show events 
+show events 
+show events 
