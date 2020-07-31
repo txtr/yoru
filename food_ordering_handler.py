@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-"""This module contains the dialogue states for the 'greeting' domain
+"""
+This module contains the dialogue states for the 'greeting' domain
 in the MindMeld home assistant blueprint application
 """
 from .root import app
@@ -402,5 +403,5 @@ def list_restaurants(request, responder):
     restaurant_names = set([restaurant['name'] for restaurant in restaurants])
     index=1
     for restaurant_name in restaurant_names:
-        reply += '\n' + index + '. ' + restaurant_name 
+        reply += '\n' + str(index) + '. ' + restaurant_name 
     responder.reply(reply)
