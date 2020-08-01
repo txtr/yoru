@@ -242,6 +242,11 @@ def fo_build_order(request, responder):
         responder.slots['price'] = sum(dish_prices)
         responder.reply('Sure, I have {dish_names} from {restaurant_name} for a total price of '
                         '${price:.2f}. Would you like to place the order?')
+        try:
+            responder.slots['img'] = selected_dishes[0]['img_url']
+            responder.reply( '{img}' )
+        except:
+            pass
         responder.listen()
     else:
         # If the user hasn't selected any dishes yet, prompt the user to make a selection based

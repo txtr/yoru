@@ -6,14 +6,17 @@ in the MindMeld home assistant blueprint application
 from .root import app
 
 def clean_cb_frame(responder):
-    frame_keys = ['cabin_tier', 'deck_id']
+    frame_keys = ['cabin_tier', 'deck_id', 'deck_pref']
     for frame_key in frame_keys:
-        del responder.frame[frame_key]
+        try:
+            del responder.frame[frame_key]
+        except:
+            pass    
     return responder
 
 def get_availability(cabin_tier, deck_pref):
     print(cabin_tier, deck_pref)
-    cabins = app.question_answerer.get(index='cabins', available="True")
+    cabins = app.question_answerer.get(index='cabins', available="true")
     print(cabins)
     available_cabins = []
     for cabin in cabins:

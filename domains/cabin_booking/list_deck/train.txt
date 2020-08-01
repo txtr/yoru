@@ -88,3 +88,11 @@ show all deck types
 show deck types
 list deck types
 list decks
+List All Decks
+list all Decks
+list All decks
+List all decks
+List All decks
+List all Decks
+list All Decks
+list all decks

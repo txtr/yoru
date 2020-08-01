@@ -3,7 +3,7 @@ from .root import app
 import json
 
 
-@app.handle(domain='locations', intent='navigation', has_entity='location')
+@app.handle(domain='locations', intent='navigation')
 def navigation(request, responder):
     location_entities = [e for e in request.entities if e['type'] == 'location']
     for location_entity in location_entities:
