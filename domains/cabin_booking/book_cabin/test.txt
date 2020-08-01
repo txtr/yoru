@@ -1,0 +1,32 @@
+{Presedential|cabin_tier} {starboard|deck}
+{starboard|deck}
+{Presedential|cabin_tier}
+book a cabin
+book cabin
+cabin booking
+book me a cabin
+i need a cabin
+cabin needed
+book a {Presedential|cabin_tier} cabin
+book a {Presedential|cabin_tier} room
+book a {port|deck} room
+book a {port|deck} cabin
+book a room
+room booking
+book room
+book a {standard|cabin_tier} cabin on {port|deck}
+book a {standard|cabin_tier} cabin on {port|deck}
+book me a {standard|cabin_tier} cabin on {port|deck}
+book me a {standard|cabin_tier} cabin on {port|deck}
+book {standard|cabin_tier} cabin on {port|deck}
+book {standard|cabin_tier} cabin on {port|deck}
+book cabin on {port|deck}
+book cabin on {port|deck}
+book a {standard|cabin_tier} room on {port|deck}
+book a {standard|cabin_tier} room on {port|deck}
+book me a {standard|cabin_tier} room on {port|deck}
+book me a {standard|cabin_tier} room on {port|deck}
+book {standard|cabin_tier} room on {port|deck}
+book {standard|cabin_tier} room on {port|deck}
+book room on {port|deck}
+book room on {port|deck}

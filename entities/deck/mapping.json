@@ -1,0 +1,43 @@
+{
+    "entities": [
+        {
+            "whitelist": [
+                "starboard",
+                "Starboard",
+                "Starboard",
+                "Star board",
+                "star Board",
+                "star board",
+                "star board",
+                "star",
+                "Star",
+                "board",
+                "Board",
+                "Left Side",
+                "Left",
+                "left",
+                "left Side",
+                "Left Side"
+            ],
+            "cname": "Starboard",
+            "id": 1
+        },
+        {
+            "whitelist": [
+                "Port Side",
+                "port Side",
+                "Port side",
+                "port side",
+                "Port",
+                "port",
+                "Right",
+                "right",
+                "Right Side",
+                "right side",
+                "Right side"
+            ],
+            "cname": "Port",
+            "id": 2
+        }
+    ]
+}

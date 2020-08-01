@@ -1,0 +1,17 @@
+[
+	{
+		"id": 0,
+		"name": "Presidential Suite",
+		"description": "Plush and luxurious suite facing Aft Deck with King Side Bed. You will love it."
+	},
+	{
+		"id": 1,
+		"name": "First Class Suite",
+		"description": "Queen sized bed with star and port facing windows."
+	},
+	{
+		"id": 2,
+		"name": "Standard Suite",
+		"description": "Standard sized bed with star and port facing windows."
+	}
+]

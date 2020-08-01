@@ -1,0 +1,73 @@
+{
+    "kb_index_name": "cabin_tiers",
+    "kb_field_name": "name",
+    "entities": [
+        {
+            "whitelist": [
+                "Presedential Suite",
+                "presedential suite",
+                "presedential Suite",
+                "Presedential suite",
+                "Presedential",
+                "presedential",
+                "First One",
+                "first One",
+                "First one",
+                "first one"
+            ],
+            "cname": "Presedential Suite",
+            "id": 1
+        },
+        {
+            "whitelist": [
+                "First Class Suite",
+                "first class suite",
+                "first Class Suite",
+                "First class Suite",
+                "First Class suite",
+                "first class Suite",
+                "First class suite",
+                "first Class suite",
+                "first class suite",
+                "First Class",
+                "first Class",
+                "First class",
+                "first class",
+                "first",
+                "First",
+                "Second One",
+                "second One",
+                "Second one",
+                "second one",
+                "middle one",
+                "Middle One",
+                "middle One",
+                "Middle one",
+                "second"
+            ],
+            "cname": "Presedential Suite",
+            "id": 2
+        },
+        {
+            "whitelist": [
+                "Standard Suite",
+                "standard Suite",
+                "Standard suite",
+                "standard suite",
+                "Standard",
+                "standard",
+                "normal",
+                "normal",
+                "general",
+                "General",
+                "Third One",
+                "third One",
+                "Third One",
+                "third one",
+                "third"
+            ],
+            "cname": "Presedential Suite",
+            "id": 3
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+list restaurants
+get names of restaurants
+get restaurants
+get restaurant names
+all restaurants please
+names of restaurants please
+show all restaurants
+show restaurant names

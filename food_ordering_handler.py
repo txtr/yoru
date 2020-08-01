@@ -1,15 +1,16 @@
 # -*- coding: utf-8 -*-
-"""This module contains the dialogue states for the 'greeting' domain
+"""
+This module contains the dialogue states for the 'greeting' domain
 in the MindMeld home assistant blueprint application
 """
 from .root import app
 
-@app.handle(intent="exit_food_ordering")
+@app.handle(domain='food_ordering', intent="exit_food_ordering")
 def fo_exit(response, responder):
     """
     When the user wants to exit food ordering domain.
     """
-    responder.frame['food_ordering'] = {}
+    responder = clean_fo_frame(responder)
     replies = ['I hope you will try ordering food again.']
     responder.reply(replies)
     # send change domain flag to frontend
@@ -19,20 +20,19 @@ def fo_exit(response, responder):
     responder.listen()
 
 
-
-@app.handle(intent='start_over')
+@app.handle(domain='food_ordering', intent='start_over')
 def fo_start_over(request, responder):
     """
     When the user wants to start over, clear the dialogue frame and reply for the next request.
     """
     # Clear the dialogue frame and respond with a variation of the welcome message.
-    responder.frame['food_ordering'] = {}
+    responder = clean_fo_frame(responder)
     replies = ["Ok, let's start over! What restaurant would you like to order from?"]
     responder.reply(replies)
-    responder.params.allowed_intents = ['food_ordering.*']
+    # responder.params.allowed_intents = ['food_ordering.*']
     responder.listen()
 
-@app.handle(intent='help')
+@app.handle(domain='food_ordering', intent='help')
 def fo_help(request, responder):
     """
     When the user asks for help, provide some sample queries they can try.
@@ -41,12 +41,11 @@ def fo_help(request, responder):
     # For simplicity, we have a fixed set of demonstrative queries here, but they could also be
     # randomly sampled from a pool of example queries each time.
     replies = ["I can help you order food delivery from your local restaurants. For example, "
-               "you can say 'I would like a pad see ew from Modern Thai' or 'I feel like "
+               "you can say 'I would like a 'pad see ew' from Modern Thai' or 'I feel like "
                "having a burrito.'"]
-    responder.params.allowed_intents = ['food_ordering.*']
     responder.reply(replies)
 
-@app.handle(intent='place_order')
+@app.handle(domain='food_ordering', intent='place_order')
 def fo_place_order(request, responder):
     """
     When the user wants to place the order, call an external API to process the transaction and
@@ -71,21 +70,21 @@ def fo_place_order(request, responder):
             # TODO forward to general domain to classify
 
             # Clear the dialogue frame to start afresh for the next user request.
-            responder.frame['food_ordering'] = {}
+            responder = clean_fo_frame(responder)
         else:
             # If no dishes have been requested, prompt the user to order something from the menu.
             replies = ["I don't have any dishes in the basket yet. What would you like to order "
                        "from {restaurant_name}?"]
-            responder.params.allowed_intents = ['food_ordering.*']
+            # responder.params.allowed_intents = ['food_ordering.*']
     else:
         # If no restaurant has been selected, prompt the user to make a selection.
         replies = ["I'm sorry, you need to select a restaurant before placing an order."]
-        responder.params.allowed_intents = ['food_ordering.*']
-
+        # responder.params.allowed_intents = ['food_ordering.*']
     responder.reply(replies)
 
 
-@app.handle(intent='build_order')
+
+@app.handle(domain='food_ordering', intent='build_order')
 def fo_build_order(request, responder):
     """
     When the user expresses an intent to start or continue ordering food, provide the
@@ -130,7 +129,6 @@ def fo_build_order(request, responder):
             responder.slots['restaurant_name'] = restaurant_entity['text']
             responder.reply("Sorry, I could not find a restaurant called {restaurant_name}. Is "
                             "there another restaurant you would like to order from?")
-            ############################################################################################responder.params.allowed_intents = ['food_ordering.*']
             responder.listen()
             return
 
@@ -179,7 +177,6 @@ def fo_build_order(request, responder):
                     responder.reply("Sorry, I couldn't find anything called {dish_name} at "
                                     "{restaurant_name}. Would you like to order something "
                                     "else?")
-                    #########################################################################################responder.params.allowed_intents = ['food_ordering']
                     responder.listen()
                     return
 
@@ -211,14 +208,12 @@ def fo_build_order(request, responder):
                 responder.slots['dish_name'] = dish_entity['text']
                 responder.reply('I found {dish_name} at {suggestions}. Where would you like '
                                 'to order from?')
-                #################################################################################################responder.params.allowed_intents = ['food_ordering.*']
                 responder.listen()
             else:
                 # If none of the user-requested dishes could be resolved to entries in the
                 # knowledge base, notify the user and prompt to choose a restaurant by name.
                 responder.reply("Sorry, I didn't find what you were looking for at any "
                                 "restaurant on this cruise. If you can specify the restaurant I could help you better.")
-                ###################################################################################################responder.params.allowed_intents = ['food_ordering.*']
                 responder.listen()
 
             return
@@ -247,7 +242,6 @@ def fo_build_order(request, responder):
         responder.slots['price'] = sum(dish_prices)
         responder.reply('Sure, I have {dish_names} from {restaurant_name} for a total price of '
                         '${price:.2f}. Would you like to place the order?')
-        responder.params.allowed_intents = ['food_ordering.*']
         responder.listen()
     else:
         # If the user hasn't selected any dishes yet, prompt the user to make a selection based
@@ -255,12 +249,10 @@ def fo_build_order(request, responder):
         if selected_restaurant:
             # If the user has chosen a restaurant, prompt to order dishes from that restaurant.
             responder.reply('Great, what would you like to order from {restaurant_name}?')
-            responder.params.allowed_intents = ['food_ordering.*']
             responder.listen()
         else:
             # If the user has not chosen a restaurant, prompt to do so.
             responder.reply('What restaurant would you like to order from?')
-            responder.params.allowed_intents = ['food_ordering.*']
             responder.listen()
 
 
@@ -384,3 +376,20 @@ def _price_dish(dish):
     if 'options' in dish:
         total_price += sum([option.get('price', 0) for option in dish['options']])
     return total_price * dish['quantity']
+
+def clean_fo_frame(responder):
+    frame_names = ['restaurant', 'dishes', 'dish_entities']
+    for frame_name in frame_names:
+        del responder.frame[frame_name]
+    return responder
+
+@app.handle(domain='food_ordering', intent='list_restaurants')
+def list_restaurants(request, responder):
+    reply = 'Heres the list of restaurants:'
+    restaurants = app.question_answerer.get(index='restaurants')
+    restaurant_names = set([restaurant['name'] for restaurant in restaurants])
+    index=1
+    for restaurant_name in restaurant_names:
+        reply += '\n' + str(index) + '. ' + restaurant_name
+        index = index + 1 
+    responder.reply(reply)
