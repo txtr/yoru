@@ -8,10 +8,22 @@ def navigation(request, responder):
     location_entities = [e for e in request.entities if e['type'] == 'location']
     for location_entity in location_entities:
         if(location_entity['role'] == 'source'):
-            responder.frame['source_loc'] = location_entity['value'][0].get('cname')
+            try:
+                responder.frame['source_loc'] = location_entity['value'][0].get('cname')
+            except IndexError:
+                responder.frame['source_loc'] = location_entity['text']
+                responder.reply("Sorry couldn't find location {source_loc}")
+                responder.listen()
+                return
         if(location_entity['role'] == 'destination'):
-            responder.frame['destination_loc'] = location_entity['value'][0].get('cname')
-
+            try:
+                responder.frame['destination_loc'] = location_entity['value'][0].get('cname')
+            except:
+                responder.frame['destination_loc'] = location_entity['text']
+                responder.reply("Sorry couldn't find location {destination_loc}")
+                responder.listen()
+                return
+    
     if(not responder.frame.get('destination_loc') and request.frame.get('destination_loc')):
         responder.frame['destination_loc'] = request.frame.get('destination_loc')
 
@@ -26,12 +38,12 @@ def navigation(request, responder):
         del responder.frame['destination_loc']
 
     elif(responder.frame.get('source_loc')):
-        responder.slots['source'] = responder.frame.get('source_loc')
-        responder.reply("Where do you want to go from {source_loc}")
+        responder.slots['source_loc'] = responder.frame.get('source_loc')
+        responder.reply("Where do you want to go from {source_loc}?")
 
     elif(responder.frame.get('destination_loc')):
         responder.slots['destination'] = responder.frame.get('destination_loc')
-        responder.reply("Your destination is {destination} \n can I get your current location")
+        responder.reply("Your destination is {destination}.\nWhere are you right now?")
  
 
 def getRouteString(sourceLocation, destinationLocation):
@@ -51,11 +63,11 @@ def getRouteString(sourceLocation, destinationLocation):
         return "Use " + sourceLobby + " to get to " + destinationLocation
     else:
         if len(route[sourceLobby][destinationLobby]) == 0:
-            return "\nUsing " + sourceLobby + " get to " + destinationLobby + " to find " + destinationLocation
+            return "Using " + sourceLobby + " get to " + destinationLobby + " to find " + destinationLocation
         if len(route[sourceLobby][destinationLobby]) == 1:
-            return "\nUsing " + sourceLobby + " get to " + route[sourceLobby][destinationLobby][0] +" and then go through " + destinationLobby + " to find " + destinationLocation
+            return "Using " + sourceLobby + " get to " + route[sourceLobby][destinationLobby][0] +" and then go through " + destinationLobby + " to find " + destinationLocation
         if len(route[sourceLobby][destinationLobby]) == 2:
-            return "\nFirst get into " + sourceLobby + "\nthen move Forward towards " + route[sourceLobby][destinationLobby][0] + "\nthen use " + route[sourceLobby][destinationLobby][1] + "\nand " + destinationLobby + "\nto find " + destinationLocation
+            return "First get into " + sourceLobby + "\nthen move Forward towards " + route[sourceLobby][destinationLobby][0] + "\nthen use " + route[sourceLobby][destinationLobby][1] + "\nand " + destinationLobby + "\nto find " + destinationLocation
         else:
             return "please select from available locations" + _get_all_location(location)
 
@@ -69,8 +81,3 @@ def _get_all_location(location):
         if typ not in all_location:
             all_location.append(typ)
     return '\n'.join([loc for loc in all_location])
-
-
-
-
-
