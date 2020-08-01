@@ -1,0 +1,3 @@
+list events 
+show events 
+show some events 

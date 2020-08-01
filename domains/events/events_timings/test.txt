@@ -1,0 +1,6 @@
+what time is {new year|event}
+when is {live concert|event}
+what time does the {concert|event} start
+when does {ball|event} starts
+timing of {new year|event}
+when is it

@@ -1,0 +1,37 @@
+{"Forward Deck"             : {  "Forward Left Corridor"  :[],
+    "Forward Right Corridor" :[],
+    "Casino Lobby"           :["Forward Left Corridor or Forward Left Corridor"],
+    "Aft Left Corridor"      :["Casino Lobby"],
+    "Aft Right Corridor"     :["Casino Lobby"]
+},
+"Casino Lobby"             : {  "Forward Deck"           :["Forward Left Corridor or Forward Right Corridor"],
+    "Forward Left Corridor"  :[],
+    "Forward Right Corridor" :[],
+    "Aft Left Corridor"      :[],
+    "Aft Right Corridor"     :[]
+},
+"Forward Left Corridor"    : {  "Forward Deck"           :[],
+    "Casino Lobby"           :[],
+    "Forward Left Corridor"  :["Casino Lobby or Forward Deck"],
+    "Aft Left Corridor"      :["Casino Lobby"],
+    "Aft Right Corridor"     :["Casino Lobby"]
+},
+"Forward Right Corridor"    : { "Forward Deck"           :[],
+    "Casino Lobby"           :[],
+    "Forward Left Corridor"  :["Casino Lobby or Forward Deck"],
+    "Aft Left Corridor"      :["Casino Lobby"],
+    "Aft Right Corridor"     :["Casino Lobby"]
+},
+"Aft Right Corridor"        : { "Forward Deck"           :["Casino Lobby", "Forward Left Corridor or Forward Right Corridor"],
+    "Casino Lobby"           :[],
+    "Forward Left Corridor"  :["Casino Lobby"],
+    "Forward Right Corridor" :["Casino Lobby"],
+    "Aft Left Corridor"      :["Casino Lobby"]
+},
+"Aft Left Corridor"        : {  "Forward Deck"           :["Casino Lobby", "Forward Left Corridor or Forward Right Corridor"],
+    "Casino Lobby"           :[],
+    "Forward Left Corridor"  :["Casino Lobby"],
+    "Forward Right Corridor" :["Casino Lobby"],
+    "Aft Right Corridor"     :["Casino Lobby"]
+}
+}

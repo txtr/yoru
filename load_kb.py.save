@@ -1,0 +1,3 @@
+from mindmeld.components import QuestionAnswerer
+qa = QuestionAnswerer('.')
+qa.load_kb('yor', 'menu_items', './data/menu_items.json')

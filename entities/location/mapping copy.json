@@ -1,0 +1,230 @@
+{
+  "entities": [
+      {
+          "whitelist": [
+              "fiesta",
+              "food fiesta",
+              "indian food",
+              "indian",
+              "Indian"
+          ],
+          "cname": "Indian Food Fiesta",
+          "id": "1"
+      },
+      {
+          "whitelist": [
+              "khalids bbq",
+              "bbq",
+              "bbq shack",
+              "khalids"
+          ],
+          "cname": "Khalid's BBQ Shack",
+          "id": "2" 
+      },
+      {
+        "whitelist": [
+            "a1",
+            "a one",
+            "A one"
+        ],
+        "cname": "A1",
+        "id": "3"
+      },
+      {
+        "whitelist": [
+            "a2",
+            "a two",
+            "A two"
+        ],
+        "cname": "A2",
+        "id": "4"
+      },
+      {
+        "whitelist": [
+            "a3",
+            "a three",
+            "A three"
+        ],
+        "cname": "A3",
+        "id": "5"
+      },
+      {
+        "whitelist": [
+            "a4",
+            "a four",
+            "A four"
+        ],
+        "cname": "A4",
+        "id": "6"
+      },
+      {
+        "whitelist": [
+            "b1",
+            "b one",
+            "B one"
+        ],
+        "cname": "B1",
+        "id": "7"
+      },
+      {
+        "whitelist": [
+            "b2",
+            "b two",
+            "B two"
+        ],
+        "cname": "B2",
+        "id": "8"
+      },
+      {
+        "whitelist": [
+            "b3",
+            "b three",
+            "B three"
+        ],
+        "cname": "B3",
+        "id": "9"
+      },
+      {
+        "whitelist": [
+            "b4",
+            "b four",
+            "B four"
+        ],
+        "cname": "B4",
+        "id": "10"
+      },
+      {
+        "whitelist": [
+            "b5",
+            "b five",
+            "B five"
+        ],
+        "cname": "B5",
+        "id": "11"
+      },
+      {
+        "whitelist": [
+            "a5",
+            "a five",
+            "A five"
+        ],
+        "cname": "A5",
+        "id": "12"
+      },
+      {
+        "whitelist": [
+            "a6",
+            "a six",
+            "A six"
+        ],
+        "cname": "A6",
+        "id": "13"
+      },
+      {
+        "whitelist": [
+            "a7",
+            "a seven",
+            "A seven"
+        ],
+        "cname": "A7",
+        "id": "14"
+      },
+      {
+        "whitelist": [
+            "b6",
+            "b six",
+            "B six"
+        ],
+        "cname": "B6",
+        "id": "15"
+      },
+      {
+        "whitelist": [
+            "b7",
+            "b seven",
+            "B seven"
+        ],
+        "cname": "B7",
+        "id": "16"
+      },
+      {
+        "whitelist": [
+            "b8",
+            "b eight",
+            "B eight"
+        ],
+        "cname": "B8",
+        "id": "17"
+      },
+      {
+        "whitelist": [
+            "relax sauna",
+            "sauna",
+            "relax"
+        ],
+        "cname": "Relaxo Sauna",
+        "id": "18"
+      },
+      {
+        "whitelist": [
+            "shop"
+        ],
+        "cname": "Shop",
+        "id": "19"
+      },
+      {
+        "whitelist": [
+            "imax",
+            "theatre",
+            "imax theatre"
+        ],
+        "cname": "IMAX Theatre",
+        "id": "20"
+      },
+      {
+        "whitelist": [
+            "gym",
+            "Bulkys",
+            "bulkys",
+            "bulkys gym"
+        ],
+        "cname": "Bulky's Gym",
+        "id": "21"
+      },
+      {
+        "whitelist": [
+            "casino",
+            "casino royale",
+            "royale"
+        ],
+        "cname": "Casino Royale",
+        "id": "22"
+      },
+      {
+        "whitelist": [
+            "asian cousine",
+            "asian",
+            "Asian",
+            "Asian Cousine"
+        ],
+        "cname": "JiJi's Asian Cousine",
+        "id": "23"
+      },
+      {
+        "whitelist": [
+            "elevator"
+        ],
+        "cname": "Elevator",
+        "id": "24"
+      },
+      {
+        "whitelist": [
+            "deck lounge",
+            "deck",
+            "lounge"
+        ],
+        "cname": "Deck Lounge",
+        "id": "25"
+    }
+      
+]}

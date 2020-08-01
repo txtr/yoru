@@ -1,0 +1,8 @@
+tell me about {live concert|event}
+how about {stand up|event}
+tell me more about {concert|event}
+details of {Carnival|event}
+details of {stand up|event}
+hat time does the {party|event} starts
+what time does the {meeting|event} starts
+tell me more
