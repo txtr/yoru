@@ -2,7 +2,7 @@ from .root import app
 
 @app.handle(domain='events',intent='events_show')
 def events_show(request, responder):
-    reply = 'Heres the list of restaurants:'
+    reply = 'Heres the list of events:'
     events = app.question_answerer.get(index='events')
     event_names = set([event['name'] for event in events])
     index=1

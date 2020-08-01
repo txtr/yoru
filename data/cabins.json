@@ -1,7 +1,7 @@
 [
   {
     "cabin_no": "A7",
-    "available": true,
+    "available": "true",
     "cabin_type": {
       "id": 1,
       "name": "Presedential Suite"
@@ -10,7 +10,7 @@
   },
   {
     "cabin_no": "A6",
-    "available": true,
+    "available": "true",
     "cabin_type": {
       "id": 2,
       "name": "First Class Suite"
@@ -19,7 +19,7 @@
   },
   {
     "cabin_no": "A5",
-    "available": true,
+    "available": "true",
     "cabin_type": {
       "id": 2,
       "name": "First Class Suite"
@@ -28,7 +28,7 @@
   },
   {
     "cabin_no": "A4",
-    "available": true,
+    "available": "true",
     "cabin_type": {
       "id": 2,
       "name": "Standard Suite"
@@ -37,7 +37,7 @@
   },
   {
     "cabin_no": "A3",
-    "available": true,
+    "available": "true",
     "cabin_type": {
       "id": 2,
       "name": "Standard Suite"
@@ -46,7 +46,7 @@
   },
   {
     "cabin_no": "A2",
-    "available": true,
+    "available": "true",
     "cabin_type": {
       "id": 2,
       "name": "Standard Suite"
@@ -55,7 +55,7 @@
   },
   {
     "cabin_no": "A1",
-    "available": true,
+    "available": "true",
     "cabin_type": {
       "id": 2,
       "name": "Standard Suite"
@@ -64,74 +64,74 @@
   },
   {
     "cabin_no": "B8",
-    "available": true,
+    "available": "true",
     "cabin_type": {
       "id": 1,
       "name": "Presedential Suite"
     },
-    "deck_side": "Port"
+    "deck_side": "Starboard"
   },
   {
     "cabin_no": "B7",
-    "available": true,
+    "available": "true",
     "cabin_type": {
       "id": 2,
       "name": "First Class Suite"
     },
-    "deck_side": "Port"
+    "deck_side": "Starboard"
   },
   {
     "cabin_no": "B6",
-    "available": true,
+    "available": "true",
     "cabin_type": {
       "id": 2,
       "name": "First Class Suite"
     },
-    "deck_side": "Port"
+    "deck_side": "Starboard"
   },
   {
     "cabin_no": "B5",
-    "available": true,
+    "available": "true",
     "cabin_type": {
       "id": 2,
       "name": "Standard Suite"
     },
-    "deck_side": "Port"
+    "deck_side": "Starboard"
   },
   {
     "cabin_no": "B4",
-    "available": true,
+    "available": "true",
     "cabin_type": {
       "id": 2,
       "name": "Standard Suite"
     },
-    "deck_side": "Port"
+    "deck_side": "Starboard"
   },
   {
     "cabin_no": "B3",
-    "available": true,
+    "available": "true",
     "cabin_type": {
       "id": 2,
       "name": "Standard Suite"
     },
-    "deck_side": "Port"
+    "deck_side": "Starboard"
   },
   {
     "cabin_no": "B2",
-    "available": true,
+    "available": "true",
     "cabin_type": {
       "id": 2,
       "name": "Standard Suite"
     },
-    "deck_side": "Port"
+    "deck_side": "Starboard"
   },
   {
     "cabin_no": "B1",
-    "available": true,
+    "available": "true",
     "cabin_type": {
       "id": 2,
       "name": "Standard Suite"
     },
-    "deck_side": "Port"
+    "deck_side": "Starboard"
   }
 ]

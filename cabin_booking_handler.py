@@ -11,6 +11,16 @@ def clean_cb_frame(responder):
         del responder.frame[frame_key]
     return responder
 
+def get_availability(cabin_tier, deck_pref):
+    print(cabin_tier, deck_pref)
+    cabins = app.question_answerer.get(index='cabins', available="True")
+    print(cabins)
+    available_cabins = []
+    for cabin in cabins:
+        if cabin["cabin_type"]["name"] == cabin_tier and cabin["deck_side"] == deck_pref:
+            print(cabin)
+            available_cabins.append(cabin)
+    return available_cabins
 
 @app.dialogue_flow(domain='cabin_booking', intent='book_cabin')
 def cb_book_cabin(request, responder):
@@ -51,9 +61,17 @@ def cb_book_cabin(request, responder):
     if cabin_tier and deck_id:
         responder.slots['cabin_tier'] = cabin_tier['name']
         responder.reply('Looking for availability in {cabin_tier} tier and with {deck_pref} deck side.')
-        available = True
-        if available:
-            responder.reply('Yes, {cabin_tier} cabin and with {deck_pref} deck side is available')
+        available_cabins = get_availability(responder.slots['cabin_tier'], responder.slots['deck_pref'])
+        if (available_cabins):
+            responder.reply('Yes, {cabin_tier} cabin and with {deck_pref} deck side is available.')
+            reply = 'Heres the list of available cabins that suit your preference:'
+            index = 1
+            for cabin in available_cabins:
+                reply = reply + '\n' + str(index) + '. ' + cabin['cabin_no']
+                index = index + 1
+            responder.reply(reply)
+            responder.reply('You can book your preferred cabin from the Passenger Assistance Booth near Casino')
+            responder.frame['destination_loc'] = 'Casino Royale'
         else:
             responder.reply('Sorry, {cabin_tier} cabin and with {deck_pref} deck side is not available')
         clean_cb_frame(responder)
@@ -85,7 +103,7 @@ def cb_book_cabin_via_flow_default(request, responder):
         responder.frame['count'] += 1
     except:
         responder.frame['count'] = 0
-    if responder.frame['count'] <= 3:
+    if responder.frame['count'] <= 2:
         responder.reply('Sorry, I did not get you. You can try saying "book ticket", if you want to try again.')
         responder.listen()
     else:
