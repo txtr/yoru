@@ -81,7 +81,10 @@ def cb_list_deck_via_flow(request, responder):
 
 @cb_book_cabin.handle(default=True)
 def cb_book_cabin_via_flow_default(request, responder):
-    responder.frame['count'] += 1
+    try:
+        responder.frame['count'] += 1
+    except:
+        responder.frame['count'] = 0
     if responder.frame['count'] <= 3:
         responder.reply('Sorry, I did not get you. You can try saying "book ticket", if you want to try again.')
         responder.listen()
