@@ -6,17 +6,14 @@ in the MindMeld home assistant blueprint application
 from .root import app
 
 def clean_cb_frame(responder):
-    frame_keys = ['cabin_tier', 'deck_id', 'deck_pref']
+    frame_keys = ['cabin_tier', 'deck_id']
     for frame_key in frame_keys:
-        try:
-            del responder.frame[frame_key]
-        except:
-            pass    
+        del responder.frame[frame_key]
     return responder
 
 def get_availability(cabin_tier, deck_pref):
     print(cabin_tier, deck_pref)
-    cabins = app.question_answerer.get(index='cabins', available="true")
+    cabins = app.question_answerer.get(index='cabins', available="True")
     print(cabins)
     available_cabins = []
     for cabin in cabins:
@@ -67,12 +64,13 @@ def cb_book_cabin(request, responder):
         available_cabins = get_availability(responder.slots['cabin_tier'], responder.slots['deck_pref'])
         if (available_cabins):
             responder.reply('Yes, {cabin_tier} cabin and with {deck_pref} deck side is available.')
-            reply = 'Heres the list of available cabins that suit your preference:'
+            responder.reply('Heres the list of available cabins that suit your preference:')
             index = 1
             for cabin in available_cabins:
                 reply = reply + '\n' + str(index) + '. ' + cabin['cabin_no']
+                responder.reply(reply)
+                responder.reply(cabin['image'])
                 index = index + 1
-            responder.reply(reply)
             responder.reply('You can book your preferred cabin from the Passenger Assistance Booth near Casino')
             responder.frame['destination_loc'] = 'Casino Royale'
         else:
@@ -80,11 +78,11 @@ def cb_book_cabin(request, responder):
         clean_cb_frame(responder)
         responder.exit_flow()
     elif cabin_tier:
-        responder.reply('Please specify your prefered deck side. To get all options say "List All Decks"')
+        responder.reply('Please specify your prefered deck side. Deck preferences are Port ie. Left Side and Star ie. Right Side.')
     elif deck_id:
-        responder.reply('Please specify if you would like to book Presedetial, First Class or Standard Cabin.')
+        responder.reply('Please specify if you would like to book? Say "List all cabin iters" to get list of tiers.')
     else:
-        responder.reply('Please specify if you would like to book Presedetial, First Class or Standard Cabin.')
+        responder.reply('Please specify if you would like to book? Say "List all cabin iters" to get list of tiers.')
     responder.listen()
 
 
