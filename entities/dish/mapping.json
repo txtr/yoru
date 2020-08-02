@@ -1,6 +1,4 @@
 {
-    "kb_index_name": "menu_items",
-    "kb_field_name": "name",
     "entities": [
         {
             "whitelist": [

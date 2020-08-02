@@ -195,10 +195,18 @@ def fo_build_order(request, responder):
             if dish_entity:
                 # Get up to three possible resolved values for the dish entity.
                 dish_candidates = [value for value in dish_entity['value']][0:3]
-
                 # Get the knowledge base entry for each of the dishes.
                 dish_entries = [_kb_fetch('menu_items', dc['id']) for dc in dish_candidates]
-
+                valid_dish_entries = []
+                for i,entries in enumerate(dish_entries):
+                    if entries != None:
+                        valid_dish_entries.append(entries)
+                dish_entries = valid_dish_entries    
+                if(len(dish_entries) == 0):
+                    responder.reply("Sorry, I didn't find what you were looking for at any "
+                                "restaurant on this cruise. If you can specify the restaurant I could help you better.")
+                    responder.listen()
+                    return                 
                 # Get the restaurant info for each dish from their respective KB entries.
                 restaurant_ids = set([entry['restaurant_id'] for entry in dish_entries])
                 restaurant_names = [_kb_fetch('restaurants', rid)['name'] for rid in restaurant_ids]
@@ -240,13 +248,14 @@ def fo_build_order(request, responder):
         else:
             responder.slots['dish_names'] = ' '.join(dish_names)
         responder.slots['price'] = sum(dish_prices)
-        responder.reply('Sure, I have {dish_names} from {restaurant_name} for a total price of '
-                        '${price:.2f}. Would you like to place the order?')
-        try:
-            responder.slots['img'] = selected_dishes[0]['img_url']
-            responder.reply( '{img}' )
-        except:
-            pass
+        print(selected_dishes[-1])
+        img = selected_dishes[-1].get('img_url')
+        if img:
+            reply = 'Sure, I have {dish_names} from {restaurant_name} for a total price of '+'${price:.2f}. Would you like to place the order?'+'\n' + img
+        else:
+            reply = 'Sure, I have {dish_names} from {restaurant_name} for a total price of '+'${price:.2f}. Would you like to place the order?'
+        responder.reply(reply)
+    
         responder.listen()
     else:
         # If the user hasn't selected any dishes yet, prompt the user to make a selection based
@@ -274,7 +283,12 @@ def _kb_fetch(kb_index, kb_id):
     Returns:
         dict: The full knowledge base entry corresponding to the given ID.
     """
-    return app.question_answerer.get(index=kb_index, id=kb_id)[0]
+    print(kb_id)
+    try:
+        res = app.question_answerer.get(index=kb_index, id=kb_id)[0]
+    except:
+        res = None
+    return res
 
 
 def _resolve_dish(dish_entity, selected_restaurant):
@@ -306,6 +320,16 @@ def _resolve_dish(dish_entity, selected_restaurant):
 
     # Get the full knowledge base entry for each of the dish candidates.
     dish_entries = [_kb_fetch('menu_items', dc['id']) for dc in dish_candidates]
+    valid_dish_entries = []
+    for i,entries in enumerate(dish_entries):
+        if entries != None:
+            valid_dish_entries.append(entries)
+    dish_entries = valid_dish_entries    
+    if(len(dish_entries) == 0):
+        responder.reply("Sorry, I didn't find what you were looking for at any "
+                                            "restaurant on this cruise. If you can specify the restaurant I could help you better.")
+        responder.listen()
+        return      
 
     # Choose the first candidate whose restaurant information matches with the provided restaurant.
     dish = next((d for d in dish_entries if d['restaurant_id'] == selected_restaurant['id']), None)

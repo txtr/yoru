@@ -60,18 +60,18 @@ def cb_book_cabin(request, responder):
 
     if cabin_tier and deck_id:
         responder.slots['cabin_tier'] = cabin_tier['name']
-        responder.reply('Looking for availability in {cabin_tier} tier and with {deck_pref} deck side.')
+        reply = 'Looking for availability in {cabin_tier} tier and with {deck_pref} deck side'
         available_cabins = get_availability(responder.slots['cabin_tier'], responder.slots['deck_pref'])
+        print(available_cabins)
         if (available_cabins):
-            responder.reply('Yes, {cabin_tier} cabin and with {deck_pref} deck side is available.')
-            responder.reply('Heres the list of available cabins that suit your preference:')
+            reply += '\nYes, {cabin_tier} cabin and with {deck_pref} deck side is available.'
+            reply += '\nHeres the list of available cabins that suit your preference:'
             index = 1
             for cabin in available_cabins:
-                reply = reply + '\n' + str(index) + '. ' + cabin['cabin_no']
-                responder.reply(reply)
-                responder.reply(cabin['image'])
+                reply += '\n'+str(index) + '. ' + cabin['cabin_no'] + '\n'+cabin['image']
                 index = index + 1
-            responder.reply('You can book your preferred cabin from the Passenger Assistance Booth near Casino')
+            reply += '\nYou can book your preferred cabin from the Passenger Assistance Booth near Casino'
+            responder.reply(reply)
             responder.frame['destination_loc'] = 'Casino Royale'
         else:
             responder.reply('Sorry, {cabin_tier} cabin and with {deck_pref} deck side is not available')
