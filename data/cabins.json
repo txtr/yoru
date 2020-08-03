@@ -7,7 +7,7 @@
       "name": "Presedential Suite"
     },
     "deck_side": "Port",
-    "image": "https://github.com/txtr/yoru/blob/master/images/cabin_rooms/cabin_presedential.jpg?raw=true"
+    "image": "https://github.com/alok5633/Yoru/blob/master/images/cabin_rooms/cabin_presedential.jpg?raw=true"
   },
   {
     "cabin_no": "A6",
@@ -17,7 +17,7 @@
       "name": "First Class Suite"
     },
     "deck_side": "Port",
-    "image": "https://github.com/txtr/yoru/blob/master/images/cabin_rooms/cruise_first_class.jpeg?raw=true"
+    "image": "https://github.com/alok5633/Yoru/blob/master/images/cabin_rooms/cruise_first_class.jpeg?raw=true"
   },
   {
     "cabin_no": "A5",
@@ -27,7 +27,7 @@
       "name": "First Class Suite"
     },
     "deck_side": "Port",
-    "image": "https://github.com/txtr/yoru/blob/master/images/cabin_rooms/cruise_first_class.jpeg?raw=true"
+    "image": "https://github.com/alok5633/Yoru/blob/master/images/cabin_rooms/cruise_first_class.jpeg?raw=true"
   },
   {
     "cabin_no": "A4",
@@ -37,7 +37,7 @@
       "name": "Standard Suite"
     },
     "deck_side": "Port",
-    "image": "https://github.com/txtr/yoru/blob/master/images/cabin_rooms/crusie_standard.jpg?raw=true"
+    "image": "https://github.com/alok5633/Yoru/blob/master/images/cabin_rooms/crusie_standard.jpg?raw=true"
   },
   {
     "cabin_no": "A3",
@@ -47,7 +47,7 @@
       "name": "Standard Suite"
     },
     "deck_side": "Port",
-    "image": "https://github.com/txtr/yoru/blob/master/images/cabin_rooms/crusie_standard.jpg?raw=true"
+    "image": "https://github.com/alok5633/Yoru/blob/master/images/cabin_rooms/crusie_standard.jpg?raw=true"
   },
   {
     "cabin_no": "A2",
@@ -57,7 +57,7 @@
       "name": "Standard Suite"
     },
     "deck_side": "Port",
-    "image": "https://github.com/txtr/yoru/blob/master/images/cabin_rooms/crusie_standard.jpg?raw=true"
+    "image": "https://github.com/alok5633/Yoru/blob/master/images/cabin_rooms/crusie_standard.jpg?raw=true"
   },
   {
     "cabin_no": "A1",
@@ -67,7 +67,7 @@
       "name": "Standard Suite"
     },
     "deck_side": "Port",
-    "image": "https://github.com/txtr/yoru/blob/master/images/cabin_rooms/crusie_standard.jpg?raw=true"
+    "image": "https://github.com/alok5633/Yoru/blob/master/images/cabin_rooms/crusie_standard.jpg?raw=true"
   },
   {
     "cabin_no": "B8",
@@ -76,7 +76,7 @@
       "id": 1,
       "name": "Presedential Suite"
     },
-    "image": "https://github.com/txtr/yoru/blob/master/images/cabin_rooms/cabin_presedential.jpg?raw=true",
+    "image": "https://github.com/alok5633/Yoru/blob/master/images/cabin_rooms/cabin_presedential.jpg?raw=true",
     "deck_side": "Starboard"
   },
   {
@@ -87,7 +87,7 @@
       "name": "First Class Suite"
     },
     "deck_side": "Starboard",
-    "image": "https://github.com/txtr/yoru/blob/master/images/cabin_rooms/cruise_first_class.jpeg?raw=true"
+    "image": "https://github.com/alok5633/Yoru/blob/master/images/cabin_rooms/cruise_first_class.jpeg?raw=true"
   },
   {
     "cabin_no": "B6",
@@ -97,7 +97,7 @@
       "name": "First Class Suite"
     },
     "deck_side": "Starboard",
-    "image": "https://github.com/txtr/yoru/blob/master/images/cabin_rooms/cruise_first_class.jpeg?raw=true"
+    "image": "https://github.com/alok5633/Yoru/blob/master/images/cabin_rooms/cruise_first_class.jpeg?raw=true"
   },
   {
     "cabin_no": "B5",
@@ -107,7 +107,7 @@
       "name": "Standard Suite"
     },
     "deck_side": "Starboard",
-    "image": "https://github.com/txtr/yoru/blob/master/images/cabin_rooms/crusie_standard.jpg?raw=true"
+    "image": "https://github.com/alok5633/Yoru/blob/master/images/cabin_rooms/crusie_standard.jpg?raw=true"
   },
   {
     "cabin_no": "B4",
@@ -117,7 +117,7 @@
       "name": "Standard Suite"
     },
     "deck_side": "Starboard",
-    "image": "https://github.com/txtr/yoru/blob/master/images/cabin_rooms/crusie_standard.jpg?raw=true"
+    "image": "https://github.com/alok5633/Yoru/blob/master/images/cabin_rooms/crusie_standard.jpg?raw=true"
   },
   {
     "cabin_no": "B3",
@@ -127,7 +127,7 @@
       "name": "Standard Suite"
     },
     "deck_side": "Starboard",
-    "image": "https://github.com/txtr/yoru/blob/master/images/cabin_rooms/crusie_standard.jpg?raw=true"
+    "image": "https://github.com/alok5633/Yoru/blob/master/images/cabin_rooms/crusie_standard.jpg?raw=true"
   },
   {
     "cabin_no": "B2",
@@ -137,7 +137,7 @@
       "name": "Standard Suite"
     },
     "deck_side": "Starboard",
-    "image": "https://github.com/txtr/yoru/blob/master/images/cabin_rooms/crusie_standard.jpg?raw=true"
+    "image": "https://github.com/alok5633/Yoru/blob/master/images/cabin_rooms/crusie_standard.jpg?raw=true"
   },
   {
     "cabin_no": "B1",
@@ -147,6 +147,6 @@
       "name": "Standard Suite"
     },
     "deck_side": "Starboard",
-    "image": "https://github.com/txtr/yoru/blob/master/images/cabin_rooms/crusie_standard.jpg?raw=true"
+    "image": "https://github.com/alok5633/Yoru/blob/master/images/cabin_rooms/crusie_standard.jpg?raw=true"
   }
 ]
