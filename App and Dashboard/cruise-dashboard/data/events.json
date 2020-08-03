@@ -1,0 +1,56 @@
+[
+  {
+    "id": "1",
+    "name": "New Year's Party",
+    "date": "31/12/2020",
+    "time": "09:00 PM IST",
+    "venue": "2nd Floor Hall Way",
+    "details": "2020 New Year Celebration ",
+    "img_url": "https://www.herongate.com/wp-content/uploads/happy-new-year-2020.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Live Concert",
+    "date": "01/01/2021",
+    "time": "12:00 AM IST",
+    "venue": "2nd Floor Hall Way",
+    "details": "Live performance by AR. Rahman",
+    "img_url": "https://i.gadgets360cdn.com/large/Book_Tickets_For_Bryan_Adams_Live_Concert_The_Ultimate_Tour_1536224531587.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Stand-Up Comedy",
+    "date": "11/01/2020",
+    "time": "09:00 PM IST",
+    "venue": "15th Floor Concert Hall",
+    "details": "Stand-Up special by Jimmy O'Yang",
+    "img_url": "https://i0.wp.com/readysteadycut.com/wp-content/uploads/2020/05/Screenshot-2020-05-06-at-09.13.04-e1588758708651.png"
+  },
+  {
+    "id": "4",
+    "name": "Pool Party",
+    "date": "30/03/2021",
+    "time": "08:00 PM IST",
+    "venue": "Tear pool",
+    "details": "Aqua-fun filled party for all passengers",
+    "img_url": "http://www.weeklies.ca/wp-content/uploads/2016/01/pool-party.jpeg"
+  },
+  {
+    "id": "5",
+    "name": "Paintball Showdown",
+    "date": "20/02/2020",
+    "time": "10:00 AM IST",
+    "venue": "Gym",
+    "details": "Show off your marksmanship in a paintball tournament",
+    "img_url": "https://lerablog.org/wp-content/uploads/2017/05/dubai-paintball-6.jpg"
+  },
+  {
+    "id": "6",
+    "name": "January Half-price Sale",
+    "date": "16/01/2020",
+    "time": "08:00 AM IST",
+    "venue": "Shop",
+    "details": "50% on all brands",
+    "img_url": "https://imagevars.gulfnews.com/2019/05/02/DUBAISALE_16a76e8ea9b_large.JPG"
+  }
+]
